@@ -1,37 +1,20 @@
-# fortune.py - Version 1.1
-
-import random
+# fortune.py - Version 1.0
 
 def main():
     name = "Archisman Roy"
     admission_number = "21JE0152"
 
     print(f"🔮 Welcome to {name}'s Fortune Teller ({admission_number}) 🔮")
-    mood = input("How are you feeling today? (happy/sad/neutral/stressed): ").strip().lower()
+    mood = input("How are you feeling today? (happy/sad/neutral): ").strip().lower()
 
-    fortunes = {
-        "happy": [
-            f"Great things await you, {name}! Keep smiling.",
-            "Your joy is contagious—spread it around!"
-        ],
-        "sad": [
-            "Better days are coming. Hang in there.",
-            "Tough times never last, but tough people do."
-        ],
-        "neutral": [
-            "Something unexpected will bring you joy today.",
-            "Stay steady. Peace is power."
-        ],
-        "stressed": [
-            "Breathe in strength, breathe out stress.",
-            f"Relax, {name}. You've got this!"
-        ]
-    }
-
-    if mood in fortunes:
-        print(f"✨ Your fortune: {random.choice(fortunes[mood])} ✨")
+    if mood == "happy":
+        print(f"✨ Your fortune: Great things await you, {name}! Keep smiling. ✨")
+    elif mood == "sad":
+        print("✨ Your fortune: Better days are coming. Hang in there. ✨")
+    elif mood == "neutral":
+        print("✨ Your fortune: Something unexpected will bring you joy today. ✨")
     else:
-        print("❗ Please enter a valid mood (happy/sad/neutral/stressed).")
+        print("❗ Please enter a valid mood (happy/sad/neutral).")
 
 if __name__ == "__main__":
     main()
